@@ -36,7 +36,9 @@ THIRD_PARTY_APPS = [
     "rest_framework",
 ]
 
-MY_APPS = []
+MY_APPS = [
+    "upload_cnab",
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + MY_APPS
 
@@ -126,6 +128,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads_cnab")
+MEDIA_URL = "/uploads_cnab/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
