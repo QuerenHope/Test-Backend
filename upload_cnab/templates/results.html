@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Resultados</title>
+		<style>
+			* {
+				font-family: arial, sans-serif;
+			}
+			table {
+				border-collapse: collapse;
+				width: 45%;
+			}
+			td,
+			th {
+				border: 1px solid black;
+				text-align: center;
+				padding: 8px;
+			}
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>LISTA DE TRANSAÇÕES POR LOJA</h1>
+		<table>
+			<tr>
+				<th>Tipo</th>
+				<th>Data</th>
+				<th>Valor</th>
+				<th>CPF</th>
+				<th>Hora</th>
+				<th>Representante</th>
+				<th>Nome da loja</th>
+			</tr>
+			{% for item in cnab_list_1 %}
+			<tr>
+				<td>{{item.type}}</td>
+				<td>{{item.date}}</td>
+				<td>R$ {{item.value}}</td>
+				<td>{{item.cpf}}</td>
+				<td>{{item.hour}}</td>
+				<td>{{item.owner_shop}}</td>
+				<td>{{item.shop_name}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<h2>Saldo total: R$ {{value_1}}</h2>
+
+		<hr />
+		<br />
+
+		<table>
+			<tr>
+				<th>Tipo</th>
+				<th>Data</th>
+				<th>Valor</th>
+				<th>CPF</th>
+				<th>Hora</th>
+				<th>Representante</th>
+				<th>Nome da loja</th>
+			</tr>
+			{% for item in cnab_list_2 %}
+			<tr>
+				<td>{{item.type}}</td>
+				<td>{{item.date}}</td>
+				<td>R$ {{item.value}}</td>
+				<td>{{item.cpf}}</td>
+				<td>{{item.hour}}</td>
+				<td>{{item.owner_shop}}</td>
+				<td>{{item.shop_name}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<h2>Saldo total: R$ {{value_2}}</h2>
+
+		<hr />
+		<br />
+
+		<table>
+			<tr>
+				<th>Tipo</th>
+				<th>Data</th>
+				<th>Valor</th>
+				<th>CPF</th>
+				<th>Hora</th>
+				<th>Representante</th>
+				<th>Nome da loja</th>
+			</tr>
+			{% for item in cnab_list_3 %}
+			<tr>
+				<td>{{item.type}}</td>
+				<td>{{item.date}}</td>
+				<td>R$ {{item.value}}</td>
+				<td>{{item.cpf}}</td>
+				<td>{{item.hour}}</td>
+				<td>{{item.owner_shop}}</td>
+				<td>{{item.shop_name}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<h2>Saldo total: R$ {{value_3}}</h2>
+
+		<hr />
+		<br />
+
+		<table>
+			<tr>
+				<th>Tipo</th>
+				<th>Data</th>
+				<th>Valor</th>
+				<th>CPF</th>
+				<th>Hora</th>
+				<th>Representante</th>
+				<th>Nome da loja</th>
+			</tr>
+			{% for item in cnab_list_4 %}
+			<tr>
+				<td>{{item.type}}</td>
+				<td>{{item.date}}</td>
+				<td>R$ {{item.value}}</td>
+				<td>{{item.cpf}}</td>
+				<td>{{item.hour}}</td>
+				<td>{{item.owner_shop}}</td>
+				<td>{{item.shop_name}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<h2>Saldo total: R$ {{value_4}}</h2>
+
+		<hr />
+		<br />
+
+		<table>
+			<tr>
+				<th>Tipo</th>
+				<th>Data</th>
+				<th>Valor</th>
+				<th>CPF</th>
+				<th>Hora</th>
+				<th>Representante</th>
+				<th>Nome da loja</th>
+			</tr>
+			{% for item in cnab_list_5 %}
+			<tr>
+				<td>{{item.type}}</td>
+				<td>{{item.date}}</td>
+				<td>R$ {{item.value}}</td>
+				<td>{{item.cpf}}</td>
+				<td>{{item.hour}}</td>
+				<td>{{item.owner_shop}}</td>
+				<td>{{item.shop_name}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<h2>Saldo total: R$ {{value_5}}</h2>
+	</body>
+</html>

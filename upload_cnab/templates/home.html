@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Envio Arquivo CNAB</title>
+		<style>
+			* {
+				font-family: arial, sans-serif;
+			}
+			body {
+				display: flex;
+				height: 30rem;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			form {
+				width: 50%;
+				height: 50%;
+				align-self: center;
+				border: 1px solid black;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				gap: 20px;
+			}
+
+			input {
+				width: 50%;
+				align-self: center;
+				scale: 1.2;
+			}
+
+			button {
+				width: 45%;
+				align-self: center;
+				scale: 1.2;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Fomulário de Envio</h1>
+		<form
+			action="{% url 'cnab' %}"
+			method="post"
+			enctype="multipart/form-data"
+		>
+			{% csrf_token %} {{ form.file }}
+			<button type="submit">Upload arquivo CNAB</button>
+		</form>
+	</body>
+</html>

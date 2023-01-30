@@ -1,4 +1,4 @@
 from django.urls import path
-from .views import CnabView
+from .views import UploadCnabView
 
-urlpatterns = [path("cnab/", CnabView.as_view(), name="cnab")]
+urlpatterns = [path("cnab/", UploadCnabView, name="cnab")]

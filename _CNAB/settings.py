@@ -128,8 +128,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "uploads_cnab")
-MEDIA_URL = "/uploads_cnab/"
+
+MEDIA_URL = "cnab_files/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "cnab_files")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
